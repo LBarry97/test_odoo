@@ -2,3 +2,7 @@
 	path = src/odoo_server
 	url = https://github.com/odoo/odoo.git
 	branch = 11.0
+[submodule "src/addons/web"]
+	path = src/addons/web
+	url = https://github.com/OCA/web.git
+	branch = 11.0
