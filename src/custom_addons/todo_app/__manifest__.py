@@ -6,11 +6,11 @@
     'application': True,
 
     'data': [
-        'views/res_partner_view.xml',
+        'security/todo_access_rules.xml',
         'security/ir.model.access.csv',
         'views/todo_menu.xml',
         'views/todo_view.xml',
         'views/res_partner_view.xml',
-        'views/res_partner_view.xml',
+        'views/index_template.xml',
     ],
 }
