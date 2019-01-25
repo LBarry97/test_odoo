@@ -27,3 +27,9 @@ class Stage(models.Model):
     # Other fields:
     fold = fields.Boolean('Folded?')
     image = fields.Binary('Image')
+
+    # Stage class relationship with Tasks
+    task_ids = fields.One2many(
+        'todo.task',    # related model
+        'stage_id',     # field for "this" on related model
+        'Tasks in this stage')
