@@ -1,10 +1,11 @@
 from odoo.addons.base.res.res_request import referenceable_models
 from odoo import api, fields, models
-from  odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError
 
 
 class TodoTask(models.Model):
         _inherit = ['todo.task', 'mail.thread']
+        _name = 'todo.task'
 
         _sql_constraints = [
                 ('todo_task_name_uniq',  # Constraint unique identifier
@@ -26,6 +27,17 @@ class TodoTask(models.Model):
                 for todo in self:
                         if len(todo.name) < 5:
                                 raise ValidationError('Must have 5 chars!')
+
+        @api.onchange('user_id')
+        def onchange_user_id(self):
+                if not self.user_id:
+                        self.team_ids = None
+                return {
+                        'warning': {
+                                'title': 'No Responsible',
+                                'message': 'Team was also reset.'
+                        }
+                }
 
         @api.depends('stage_id.fold')
         def _compute_stage_fold(self):

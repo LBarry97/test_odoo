@@ -3,3 +3,6 @@
 
 # Inicializacion
 *.ini
+
+# Python compile
+__pycache__/
