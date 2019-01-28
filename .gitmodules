@@ -2,7 +2,11 @@
 	path = src/odoo_server
 	url = https://github.com/odoo/odoo.git
 	branch = 11.0
-[submodule "src/oca_addons/web"]
-	path = src/oca_addons/web
+[submodule "src/partner_addons/web"]
+	path = src/partner_addons/web
 	url = https://github.com/OCA/web.git
+	branch = 11.0
+[submodule "src/partner_addons/cube48-community"]
+	path = src/partner_addons/cube48-community
+	url = https://github.com/cube48AG/cube48-community-11.0.git
 	branch = 11.0
