@@ -6,3 +6,7 @@
 	path = src/partner_addons/web
 	url = https://github.com/OCA/web.git
 	branch = 11.0
+[submodule "src/partner_addons/cube48_community"]
+	path = src/partner_addons/cube48_community
+	url = https://github.com/cube48AG/cube48-community-11.0.git
+	branch = 11.0
