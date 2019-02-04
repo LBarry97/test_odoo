@@ -1,0 +1,1 @@
+-r src/odoo_server/requirements.txt
