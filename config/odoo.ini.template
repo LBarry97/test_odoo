@@ -1,5 +1,5 @@
 [options]
-addons_path = /home/lbarry/odoo-dev/test_odoo/src/odoo_server/odoo/addons,/home/lbarry/odoo-dev/test_odoo/src/odoo_server/addons
+addons_path = odoo/addons,../custom_addons,../partner_addons/web
 admin_passwd = admin
 csv_internal_sep = ,
 data_dir = /home/lbarry/.local/share/Odoo
