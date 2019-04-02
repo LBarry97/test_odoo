@@ -30,11 +30,17 @@ class TodoAPI:
     def unlink(self, id):
         return self.execute('unlink', [[id]])
 
+    # Todo: Fix the done function
+    def done(self, id):
+        if id:
+            self.execute('write', [[id], {'is_done': True}])
+        return True
+
 
 if __name__ == '__main__':
     # Sample test configurations
-    srv, db, port = 'localhost', 8069, 'todo'
+    srv, port, db = 'localhost', 8069, 'odootestdb'
     user, pwd = 'admin', 'admin'
-    api = TodoAPI(srv, db, user, pwd, )
+    api = TodoAPI(srv, port, db, user, pwd)
     from pprint import pprint
     pprint(api.read())
